@@ -17,5 +17,4 @@
 *.RTF	 diff=astextplain
 
 src/main/resources/* linguist-vendored
-* linguist-vendored
-*.js linguist-vendored=false
+
