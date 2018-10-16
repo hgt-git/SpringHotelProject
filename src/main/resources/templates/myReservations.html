@@ -1,0 +1,42 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout :: site-head">
+    <title>Reservations</title>
+</head>
+
+<body>
+<header th:replace="layout :: site-header" />
+
+<div class="container">
+<h1>My Reservations</h1>
+
+
+    <table class="table">
+        <thead>
+        <tr>
+
+            <th>Chosen Room name</th>
+            <th>Arrival date</th>
+            <th>Depart date</th>
+            <th>Status</th>
+            <th>Paid</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="reservation : ${myReservations}">
+            <td th:text="${reservation.chosenRoom.roomName}"></td>
+            <td th:text="${reservation.reservationStart}"></td>
+            <td th:text="${reservation.reservationEnd}" ></td>
+            <td th:if="${reservation.status}">Approved</td>
+            <td th:unless="${reservation.status}">Not Approved</td>
+            <td th:if="${reservation.Paid}">Paid</td>
+            <td th:unless="${reservation.Paid}">Not Paid</td>
+        </tr>
+        </tbody>
+    </table>
+
+
+
+</div>
+
+</body>
+</html>

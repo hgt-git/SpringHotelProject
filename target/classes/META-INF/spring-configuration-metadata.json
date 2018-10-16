@@ -1,0 +1,15 @@
+{
+  "groups": [{
+    "name": "storage",
+    "type": "jProject.storage.StorageProperties",
+    "sourceType": "jProject.storage.StorageProperties"
+  }],
+  "properties": [{
+    "name": "storage.location",
+    "type": "java.lang.String",
+    "description": "Folder location for storing files",
+    "sourceType": "jProject.storage.StorageProperties",
+    "defaultValue": "src/main/resources/static/uploadedImages/"
+  }],
+  "hints": []
+}

@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.braintreepayments.gateway:braintree-java:2.83.1">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/braintreepayments/gateway/braintree-java/2.83.1/braintree-java-2.83.1.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/braintreepayments/gateway/braintree-java/2.83.1/braintree-java-2.83.1-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/braintreepayments/gateway/braintree-java/2.83.1/braintree-java-2.83.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

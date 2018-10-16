@@ -1,0 +1,44 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout :: site-head">
+    <title>Reservations</title>
+</head>
+
+<body>
+<header th:replace="layout :: site-header" />
+
+<div class="container">
+<h1>Reservations</h1>
+
+
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Reservation made by</th>
+            <th>Chosen Room name</th>
+            <th>Arrival date</th>
+            <th>Status</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="reservation : ${allReservations}">
+            <td th:text="${reservation.user.email}"></td>
+            <td th:text="${reservation.chosenRoom.roomName}"></td>
+            <td th:text="${reservation.reservationEnd}" ></td>
+            <td th:if="${reservation.status}">Approved</td>
+            <td th:unless="${reservation.status}">Not Approved</td>
+            <td>
+                <form method="get" th:action="@{/admin/reservation/edit}"  >
+                    <input name="reservationId" type="hidden" th:value="${reservation.id}"/>
+                    <div><input class="btn btn-lg btn-primary btn-block" type="submit" value="Edit"/></div>
+                    <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}"/>
+                </form>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+
+</div>
+
+</body>
+</html>
